@@ -88,7 +88,7 @@ definitions:
         type: integer
       column_number:
         type: integer
-      violation_type:
+      function:
         type: string
         enum:
         - MUST
