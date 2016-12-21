@@ -49,6 +49,7 @@ paths:
           schema:
             $ref: $ref: 'https://zalando.github.io/problem/schema.yaml#/Problem'
 
+
 definitions:
   LintingRequest:
     type: object
