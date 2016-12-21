@@ -43,11 +43,11 @@ paths:
         400:
           description: Input file not parsable
           schema:
-            $ref: $ref: 'https://zalando.github.io/problem/schema.yaml#/Problem'
+            $ref: 'https://zalando.github.io/problem/schema.yaml#/Problem'
         default:
           description: An array of error objects
           schema:
-            $ref: $ref: 'https://zalando.github.io/problem/schema.yaml#/Problem'
+            $ref: 'https://zalando.github.io/problem/schema.yaml#/Problem'
 
 definitions:
   LintingRequest:
