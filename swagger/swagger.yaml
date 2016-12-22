@@ -10,6 +10,13 @@ host: "localhost:8080"
 schemes:
   - https
 basePath: /
+securityDefinitions:
+  oauth2:
+    type: oauth2
+    authorizationUrl: https://auth.zalando.com/oauth2/authorize
+    flow: password
+    scopes:
+      uid: access for zalando empolyees with zign token
 parameters:
   Authorization:
     name: Authorization
@@ -20,7 +27,7 @@ parameters:
     format: OAUTH2 (IAM)
 
 paths:
-  '/apiViolations':
+  '/api-violations':
     post:
       summary:
         Retrieves list of API violations based on the uploaded swagger file
@@ -48,12 +55,6 @@ paths:
       security:
         - oauth2:
           - uid
-
-  '/items/{some_id}/item_level_1/{level1_id}/item-level-2/{level2_id}/item-level-3/{level3_id}/item-level-4':
-    get:
-      responses:
-        200:
-          description: Some description
 
 definitions:
   LintingRequest:
@@ -83,11 +84,11 @@ definitions:
         type: string
       description:
         type: string
-      lineNumber:
+      line_number:
         type: integer
       column_number:
         type: integer
-      violationType:
+      violation_type:
         type: string
         enum:
         - MUST
