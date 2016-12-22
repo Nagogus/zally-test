@@ -49,7 +49,7 @@ paths:
         - oauth2:
           - uid
 
-  '/items/{some_id}/item_level_1/{level1_id}/item-level-2/{level2_id}/item-level-3/{level3_id}/item-level-4'
+  '/items/{some_id}/item_level_1/{level1_id}/item-level-2/{level2_id}/item-level-3/{level3_id}/item-level-4':
     get:
       responses:
         200:
